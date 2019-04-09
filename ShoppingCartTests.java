@@ -4,12 +4,12 @@ import junit.framework.TestCase;
 import static org.junit.Assert.*;
 
 public class ShoppingCartTests extends TestCase {
-	private ShoppingCart cart;
-	
-	@Before
-	public void setUp() {
-		cart = new ShoppingCart();
-	}
+    private ShoppingCart cart;
+
+    @Before
+    public void setUp() {
+        cart = new ShoppingCart();
+    }
 
     @Test
     // When created, the cart has 0 items
