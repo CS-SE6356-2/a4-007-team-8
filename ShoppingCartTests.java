@@ -37,6 +37,15 @@ public class ShoppingCartTests extends TestCase {
         cart.removeItem(thing);
         assertEquals(cart.getItemCount(), itemCount - 1);
     }
+
+	@Test
+    // When empty, the cart has 0 items
+    public void testZeroItemsWhenEmpty() {
+        Product thing = new Product("test", 5);
+        cart.addItem(thing);
+        cart.empty();
+        assertEquals(cart.getItemCount(), 0);
+    }
     
     @Test
     // When a new item is added, the number of items must be incremented
