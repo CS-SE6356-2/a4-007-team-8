@@ -37,6 +37,18 @@ public class ShoppingCartTests extends TestCase {
         cart.removeItem(thing);
         assertEquals(cart.getItemCount(), itemCount - 1);
     }
+    
+    @Test
+    // When a new item is added, the number of items must be incremented
+    public void testIncrementItemsUponAdd() 
+    {
+    	int itemCount = cart.getItemCount();
+    	Product thing = new Product("test", 5);
+    	
+    	cart.addItem(thing);
+    	
+    	assertEquals(cart.getItemCount(), itemCount+1);
+    }
 
     @Test
     // When a product not in the cart is removed, a ProductNotFoundException must be thrown
